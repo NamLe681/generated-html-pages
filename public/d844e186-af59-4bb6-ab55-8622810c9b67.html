@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Động Vật 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .service-description {
+            margin: 40px 0;
+        }
+        .pricing {
+            background: #fff;
+            padding: 20px;
+            margin: 40px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .pricing h2 {
+            margin: 0;
+        }
+        .pricing p {
+            font-size: 1.5em;
+            color: #007BFF;
+        }
+        .waitlist-form {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .waitlist-form input[type="email"] {
+            width: 80%;
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .waitlist-form button {
+            padding: 12px 20px;
+            font-size: 1em;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .waitlist-form button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .waitlist-form input[type="email"], .waitlist-form button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Động Vật 11</h1>
+            <p>Your go-to resource for everything about animals!</p>
+        </header>
+
+        <section class="service-description">
+            <h2>Service Description</h2>
+            <p>At Động Vật 11, we offer extensive information and resources about various animals, providing insights into their habitats, behaviors, and conservation efforts.</p>
+        </section>
+
+        <section class="pricing">
+            <h2>Subscription Pricing</h2>
+            <p>Just ¥30/month for exclusive access to premium content and resources!</p>
+        </section>
+
+        <section class="waitlist-form">
+            <h2>Join Our Waitlist</h2>
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Join Waitlist</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Động Vật 11. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.waitlist-form button').addEventListener('click', function() {
+            const emailInput = document.querySelector('.waitlist-form input[type="email"]');
+            if (emailInput.value) {
+                alert('Thank you for joining our waitlist!');
+                emailInput.value = ''; // Clear the input
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</body>
+</html>
