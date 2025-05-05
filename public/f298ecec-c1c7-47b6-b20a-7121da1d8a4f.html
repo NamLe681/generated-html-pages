@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cvxxc Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* soft background color */
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #3a9bdc; /* accent color */
+        }
+        .hero {
+            background-color: #3a9bdc; /* bold accent color */
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .description {
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #555;
+            max-width: 800px;
+        }
+        .pricing {
+            background-color: #e9ecef;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .price {
+            font-size: 1.5rem;
+            color: #28a745;
+            margin: 1rem 0;
+        }
+        .waitlist-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        input[type="email"] {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            width: 300px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #3a9bdc; /* button color */
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #357ab8; /* darker shade */
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .description {
+                font-size: 1rem;
+            }
+            .price {
+                font-size: 1.2rem;
+            }
+            input[type="email"] {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to cvxxc</h1>
+        </header>
+        <section class="hero">
+            <h2>Your solution for seamless experiences</h2>
+        </section>
+        <section class="description">
+            <p>
+                With cvxxc, you can effortlessly manage your essentials in an intuitive way. Whether you're a busy professional or just looking to simplify your life, cvxxc is designed for you.
+            </p>
+        </section>
+        <section class="pricing">
+            <h3>Subscription Pricing</h3>
+            <div class="price">10 JPY/month</div>
+            <p>Join our community and unlock premium features!</p>
+        </section>
+        <section class="waitlist-form">
+            <h3>Join the Waitlist</h3>
+            <form id="waitlist-form" action="#" method="post">
+                <label for="email" class="sr-only">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Get Started</button>
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 2023 cvxxc. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('waitlist-form').onsubmit = function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            alert('Thank you for joining the waitlist, ' + email + '!');
+        }
+    </script>
+</body>
+</html>
