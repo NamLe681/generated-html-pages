@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAwesomeProject</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Soft background color */
+            color: #333; /* Text color */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        header {
+            background-color: #e0f7fa; /* Soft background for header */
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .pricing {
+            background-color: #e6f7ff; /* Soft background for pricing section */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #008cba; /* Button color */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #007acc; /* Darker shade on hover */
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>MyAwesomeProject</h1>
+        <p class="description">Join us to experience something amazing!</p>
+    </header>
+
+    <section class="pricing">
+        <h2>Pricing</h2>
+        <p class="price">30 JPY/month</p>
+        <p>No hidden fees. Cancel anytime!</p>
+    </section>
+
+    <section class="waitlist">
+        <h2>Join our Waitlist</h2>
+        <form id="waitlistForm" action="#" method="post">
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" placeholder="your-email@example.com" required>
+            <button type="submit">Join Waitlist</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 MyAwesomeProject. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    document.getElementById('waitlistForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Preventing default form submission
+        const email = document.getElementById('email').value;
+        alert('Thank you for joining our waitlist, ' + email + '!');
+        this.reset(); // Reset the form
+    });
+</script>
+
+</body>
+</html>
