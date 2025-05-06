@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Động Vật - Minimal Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #e8e8e8;
+            text-align: center;
+        }
+        
+        .hero {
+            padding: 50px;
+            text-align: center;
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .service-description {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .pricing {
+            padding: 20px;
+            background-color: #ffffff;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+
+        .waitlist-form {
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 2px solid #bbb;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #e8e8e8;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Động Vật</h1>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Động Vật</h1>
+        <p>Your go-to platform for everything about animals.</p>
+    </section>
+
+    <section class="service-description">
+        <h2>Our Services</h2>
+        <p>At Động Vật, we provide comprehensive resources and community engagement opportunities for animal lovers. Join us for insights, articles, and an active community.</p>
+    </section>
+
+    <section class="pricing">
+        <h2>Subscription Plan</h2>
+        <p>Join us for just 20 JPY/month! Enjoy exclusive content and perks.</p>
+    </section>
+
+    <section class="waitlist-form">
+        <h2>Join Our Waitlist</h2>
+        <form id="waitlistForm" action="#">
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Join Waitlist</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Động Vật. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            alert(`Thank you for joining the waitlist, ${email}!`);
+        });
+    </script>
+</body>
+</html>
